@@ -1,0 +1,14 @@
+@namespace ("com.kafka.sandbox.event")
+protocol NestedEvent {
+
+  record SimpleRecord {
+    string msg;
+  }
+
+  record NestedRecord {
+    @logicalType("timestamp-millis")
+    long timestamp;
+    SimpleRecord msg;
+  }
+
+}
